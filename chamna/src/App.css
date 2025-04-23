@@ -1,9 +1,19 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .logo {
   display: flex;
-  justify-content: center; 
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
 
 .slogan {
-  font-size: 40%;
+  font-size: 44px;
   color: #F7ECDA;
+  text-align: center;
 }
