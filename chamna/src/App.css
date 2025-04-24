@@ -17,3 +17,13 @@
   color: #F7ECDA;
   text-align: center;
 }
+
+.wrap {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  margin-left: 2%;
+  margin-bottom: 1%;
+  gap: 424%;
+}

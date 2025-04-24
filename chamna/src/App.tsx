@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import Landing from './pages/Landing';
-import Main from './pages/main';
+import Main from './pages/Main';
 import Loading from './pages/Loading';
 
 function App() {
