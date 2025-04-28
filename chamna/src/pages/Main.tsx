@@ -29,8 +29,9 @@ function Main() {
             {isModalOpen && (
                 <div className="modal">
                     <div className="modal-content">
-                        <p>모달 내용</p>
-                        <button onClick={handleCloseModal}>닫기</button>
+                        <p onClick={handleCloseModal}>3s</p>
+                        <p onClick={handleCloseModal}>5s</p>
+                        <p onClick={handleCloseModal}>10s</p>
                     </div>
                 </div>
             )}
