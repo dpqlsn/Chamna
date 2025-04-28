@@ -36,3 +36,34 @@
   transform: scale(1.1);
   cursor: pointer;
 }
+
+.modal-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+
+.modal-content {
+  position: fixed;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 25%;
+  width: 30%;
+  height: 12%;
+  font-size: 44px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  color: #75685B;
+  background-color: #F7ECDA;
+}
+
+.modal-content p:hover {
+  color: #6AACCE;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
