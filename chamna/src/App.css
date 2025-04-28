@@ -52,7 +52,7 @@
   display: flex;
   gap: 25%;
   width: 30%;
-  height: 12%;
+  height: 10%;
   font-size: 44px;
   border-radius: 4px;
   justify-content: center;
@@ -61,9 +61,12 @@
   background-color: #F7ECDA;
 }
 
+.modal-content p {
+  transition: transform 0.3s ease; 
+}
+
 .modal-content p:hover {
   color: #6AACCE;
   transform: scale(1.1);
-  transition: transform 0.3s ease;
   cursor: pointer;
 }
