@@ -6,14 +6,16 @@ import camera from '../pic/camera.png';
 import img from '../pic/img.png';
 import alarm from '../pic/alarm.png';
 
-function Main() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+const Main: React.FC = () => {
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+    const [Time, setSelectedTime] = useState<number | null>(null);
 
     const handleAlarmClick = () => {
         setIsModalOpen(true);
     };
 
-    const handleCloseModal = () => {
+    const handleTimeSelect = (time: number) => {
+        setSelectedTime(time);
         setIsModalOpen(false);
     };
 
@@ -29,10 +31,16 @@ function Main() {
             {isModalOpen && (
                 <div className="modal">
                     <div className="modal-content">
-                        <p onClick={handleCloseModal}>3s</p>
-                        <p onClick={handleCloseModal}>5s</p>
-                        <p onClick={handleCloseModal}>10s</p>
+                        <p onClick={() => handleTimeSelect(3)}>3s</p>
+                        <p onClick={() => handleTimeSelect(5)}>5s</p>
+                        <p onClick={() => handleTimeSelect(10)}>10s</p>
                     </div>
+                </div>
+            )}
+
+            {Time !== null && (
+                <div className="time">
+                    {Time}s
                 </div>
             )}
         </>
