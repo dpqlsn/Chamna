@@ -45,11 +45,12 @@ const Main: React.FC = () => {
             <div className="logo">
                 <img src={logo} width='67px'/>
                     <div className="wrapper">
-                    <Webcam
-                        audio={false}
-                        ref={webcamRef}
-                        screenshotFormat="image/jpeg"
-                    />
+                        <Webcam
+                            audio={false}
+                            ref={webcamRef}
+                            screenshotFormat="image/jpeg"
+                            style={{ transform: 'scaleX(-1)' }}
+                        />
                     {imageSrc && (
                         <div>
                             <img src={imageSrc} alt="captured"/>
