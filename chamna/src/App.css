@@ -80,3 +80,9 @@
   padding: 5px;
   font-weight: bold;
 }
+
+.camera {
+  width: 1440px;
+  height: 808px;
+  object-fit: cover;
+}
