@@ -53,7 +53,7 @@ const Main: React.FC = () => {
                         />
                     {imageSrc && (
                         <div>
-                            <img src={imageSrc} alt="captured"/>
+                            <img src={imageSrc} alt="captured" style={{ transform: 'scaleX(-1)' }} />
                         </div>
                     )}
                 </div>
