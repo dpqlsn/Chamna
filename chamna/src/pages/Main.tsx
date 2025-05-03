@@ -10,17 +10,32 @@ import Webcam from 'react-webcam';
 const Main: React.FC = () => {
     const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
     const [Time, setSelectedTime] = useState<number | null>(null);
+    const [countdown, setCountdown] = useState<number | null>(null);
     const [imageSrc, setImageSrc] = useState<string | null>(null);
     const webcamRef = useRef<Webcam>(null);
 
     useEffect(() => {
         if (Time !== null) {
-            const timer = setTimeout(() => {
-                capture();
-            }, Time * 1000);
-            return () => clearTimeout(timer);
+            setCountdown(Time);
         }
     }, [Time]);
+
+    useEffect(() => {
+        if (countdown === null) return;
+
+        if (countdown === 0) {
+            capture();
+            setCountdown(null);
+            setSelectedTime(null);
+            return;
+        }
+
+        const interval = setInterval(() => {
+            setCountdown((prev) => (prev !== null ? prev - 1 : null));
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, [countdown]);
 
     const handleAlarmClick = () => {
         setIsModalOpen(true);
@@ -53,6 +68,7 @@ const Main: React.FC = () => {
                         audio={false}
                         ref={webcamRef}
                         screenshotFormat="image/jpeg"
+                        className="camera"
                         style={{ transform: 'scaleX(-1)' }}
                     />
                     {imageSrc && (
@@ -77,11 +93,11 @@ const Main: React.FC = () => {
                 </div>
             )}
 
-            {Time !== null && (
+            {countdown !== null && (
                 <div className="time">
-                    {Time}
+                    {countdown}
                 </div>
-                )}
+            )}
         </>
     );
 };
