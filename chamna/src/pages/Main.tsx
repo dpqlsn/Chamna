@@ -31,6 +31,10 @@ const Main: React.FC = () => {
         setIsModalOpen(false);
     };
 
+    const handleCameraClick = () => {
+        capture();
+    };
+
     const capture = () => {
         if (webcamRef.current) {
             const image = webcamRef.current.getScreenshot();
@@ -43,14 +47,14 @@ const Main: React.FC = () => {
     return (
         <>
             <div className="logo">
-                <img src={logo} width='67px'/>
-                    <div className="wrapper">
-                        <Webcam
-                            audio={false}
-                            ref={webcamRef}
-                            screenshotFormat="image/jpeg"
-                            style={{ transform: 'scaleX(-1)' }}
-                        />
+                <img src={logo} width='67px' />
+                <div className="wrapper">
+                    <Webcam
+                        audio={false}
+                        ref={webcamRef}
+                        screenshotFormat="image/jpeg"
+                        style={{ transform: 'scaleX(-1)' }}
+                    />
                     {imageSrc && (
                         <div>
                             <img src={imageSrc} alt="captured" style={{ transform: 'scaleX(-1)' }} />
@@ -61,7 +65,7 @@ const Main: React.FC = () => {
 
             <div className='wrap'>
                 <img src={alarm} width='60px' onClick={handleAlarmClick} />
-                <img src={camera} width='62px' />
+                <img src={camera} width='62px' onClick={handleCameraClick} />
                 <img src={img} width='60px' />
             </div>
 
@@ -77,7 +81,7 @@ const Main: React.FC = () => {
                 <div className="time">
                     {Time}
                 </div>
-            )}
+                )}
         </>
     );
 };
