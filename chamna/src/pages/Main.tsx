@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // 추가
 import '../index.css';
 import '../App.css';
 import logo from '../pic/chamna.jpg';
@@ -13,6 +14,7 @@ const Main: React.FC = () => {
     const [countdown, setCountdown] = useState<number | null>(null);
     const [imageSrc, setImageSrc] = useState<string | null>(null);
     const webcamRef = useRef<Webcam>(null);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (Time !== null) {
@@ -55,6 +57,7 @@ const Main: React.FC = () => {
             const image = webcamRef.current.getScreenshot();
             if (image) {
                 setImageSrc(image);
+                navigate('/result', { state: { image } });
             }
         }
     };
