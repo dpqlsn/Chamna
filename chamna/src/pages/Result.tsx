@@ -12,17 +12,15 @@ const Result: React.FC = () => {
     return (
         <div className="result-wrapper">
             <img src={logo} width='67px' />
-            <div className="content-area">
-                <div className="polaroid-frame">
-                        <img
-                            src={imageSrc}
-                            alt="captured"
-                            className="photo"
-                        />
-                </div>
+                <div className="content-area">
+                            <img
+                                src={imageSrc}
+                                alt="captured"
+                                className="photo"
+                            />
+                    </div>
+                <div className="footer">
             </div>
-            <div className="footer">
-        </div>
         </div>
     );
 };
