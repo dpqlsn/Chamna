@@ -125,13 +125,3 @@
   z-index: 1;
   border-radius: 8px;
 }
-
-.photo {
-  width: 398px;
-  height: 357px;
-  object-fit: cover;
-  transform: scaleX(-1);
-  background-color: black;
-  z-index: 2;
-  position: relative;
-}
