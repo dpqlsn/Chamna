@@ -88,14 +88,6 @@
   object-fit: cover;
 }
 
-.photo {
-  width: 398px;
-  height: 357px;
-  object-fit: cover;
-  transform: scaleX(-1);
-  background-color: black;
-}
-
 .content-area {
   flex: 1;
   width: 100%;
@@ -124,4 +116,14 @@
   background-color: white;
   z-index: 1;
   border-radius: 8px;
+}
+
+.photo {
+  position: relative;
+  width: 398px;
+  height: 357px;
+  object-fit: cover;
+  transform: scaleX(-1);
+  z-index: 2;
+  margin-bottom: 20%;
 }
