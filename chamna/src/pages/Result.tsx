@@ -1,8 +1,5 @@
 import { useLocation } from 'react-router-dom';
 import '../App.css';
-import '../pic/Bframe.png';
-import '../pic/Sframe.png';
-import '../pic/chamna.jpg';
 import logo from '../pic/chamna.jpg';
 
 const Result: React.FC = () => {
@@ -10,18 +7,16 @@ const Result: React.FC = () => {
     const imageSrc = location.state?.image;
 
     return (
-        <div className="result-wrapper">
-            <img src={logo} width='67px' />
+        <>
+        <img src={logo} width="67px" alt="logo" />
                 <div className="content-area">
-                            <img
-                                src={imageSrc}
-                                alt="captured"
-                                className="photo"
-                            />
+                    <div className="container">
+                        <div className="white-background" />
+                        <img src={imageSrc} alt="captured" className="photo" />
                     </div>
-                <div className="footer">
+                <div className="footer" />
             </div>
-        </div>
+        </>
     );
 };
 

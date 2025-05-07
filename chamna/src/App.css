@@ -107,3 +107,31 @@
   padding: 40px;
   box-sizing: border-box;
 }
+
+.container {
+  position: relative;
+  width: 507px;
+  height: 570px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.white-background {
+  position: absolute;
+  width: 507px;
+  height: 570px;
+  background-color: white;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.photo {
+  width: 398px;
+  height: 357px;
+  object-fit: cover;
+  transform: scaleX(-1);
+  background-color: black;
+  z-index: 2;
+  position: relative;
+}
