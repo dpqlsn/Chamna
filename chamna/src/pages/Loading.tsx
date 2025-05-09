@@ -13,20 +13,24 @@ function Loading() {
     useEffect(() => {
         const images = [loading, loading2, loading3];
         let index = 0;
+
         const interval = setInterval(() => {
             index = (index + 1) % images.length;
             setCurrentImage(images[index]);
-        }, 500); 
+        }, 500);
 
-        return () => clearInterval(interval);
-    }, []);
+        const timeout = setTimeout(() => {
+            navigate('/Main');
+        }, 3000);
 
-    const handleClick = () => {
-        navigate('/Main');
-    };
+        return () => {
+            clearInterval(interval);
+            clearTimeout(timeout);
+        };
+    }, [navigate]);
 
     return (
-        <div onClick={handleClick} style={{ cursor: 'pointer' }}>
+        <div style={{ cursor: 'pointer' }}>
             <div className='wrapper'>
                 <div className='logo'>
                     <img src={currentImage} width='276px' height='114px' alt="Loading" />
