@@ -3,6 +3,7 @@ import '../App.css';
 import logo from '../pic/chamna.jpg';
 import Bframe from '../pic/Bframe.png';
 import Sframe from '../pic/Sframe.png';
+import arrow from '../pic/arrow.png';
 
 const Result: React.FC = () => {
     const location = useLocation();
@@ -27,6 +28,10 @@ const Result: React.FC = () => {
                             <div className="Pcolor-box" />
                             <div className="Wcolor-box" />
                         </div>
+                    </div>
+                    <div className="result">
+                        <div className= "r-text">결과보기</div>
+                        <img src={arrow} width="27px" alt="arrow" style={{ justifyContent: "center" }} />
                     </div>
                 <div className="footer" />
             </div>
