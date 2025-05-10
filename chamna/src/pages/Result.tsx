@@ -16,10 +16,17 @@ const Result: React.FC = () => {
                         <div className="white-background" />
                         <img src={imageSrc} alt="captured" className="photo" />
                     </div>
-                    <div className = "frame-area">
-                        <div className = "text">프레임 크기 선택</div>
-                        <img src={Bframe} width="67px" alt="B" style={{ marginRight: "16px" }} />
-                        <img src = {Sframe} width = "51px" alt="S" />
+                    <div className="parent">
+                        <div className="item-area">
+                            <div className="text">프레임 크기 선택</div>
+                            <img src={Bframe} width="67px" alt="B" style={{ marginRight: "16px" }} />
+                            <img src={Sframe} width="51px" alt="S" />
+                        </div>
+                        <div className="item-area">
+                            <div className="text" style={{marginTop: "44px"}}>프레임 선택</div>
+                            <div className="Pcolor-box" />
+                            <div className="Wcolor-box" />
+                        </div>
                     </div>
                 <div className="footer" />
             </div>
