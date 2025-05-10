@@ -128,3 +128,16 @@
   z-index: 2;
   margin-bottom: 20%;
 }
+
+.frame-area {
+  margin-left: 4%;
+  margin-bottom: 2%;
+  width: 50%;
+  height: 50%;
+}
+
+.text{
+  font-size: 44px;
+  color : #75685B;
+  margin-bottom: 16px;
+}
