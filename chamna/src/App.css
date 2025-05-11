@@ -175,6 +175,14 @@
   margin-bottom: 8px;
 }
 
+.Pcolor-box.selected {
+  border: 2px solid #75685B;
+}
+
+.Wcolor-box.selected {
+  border: 2px solid #75685B;
+}
+
 .result {
   display: flex;
   flex-direction: column;
