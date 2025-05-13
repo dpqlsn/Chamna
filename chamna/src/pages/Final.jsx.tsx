@@ -1,9 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import '../App.css';
-import saveIcon from '../pic/save.png';
-import backIcon from '../pic/back.png';
 
-const FinalResult: React.FC = () => {
+const Final: React.FC = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const imageSrc = location.state?.image;
@@ -18,14 +16,12 @@ const FinalResult: React.FC = () => {
             </div>
             <div className="final-button left" onClick={() => navigate('/')}>
                 <div className="btn-label">처음으로</div>
-                <img src={backIcon} alt="back" className="btn-icon" />
             </div>
             <div className="final-button right" onClick={() => alert('저장되었습니다.')}>
                 <div className="btn-label">저장하기</div>
-                <img src={saveIcon} alt="save" className="btn-icon" />
             </div>
         </div>
     );
 };
 
-export default FinalResult;
+export default Final;
