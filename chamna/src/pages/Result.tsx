@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import '../App.css';
 import logo from '../pic/chamna.jpg';
@@ -8,10 +8,13 @@ import arrow from '../pic/arrow.png';
 
 const Result: React.FC = () => {
     const location = useLocation();
+    const navigate = useNavigate();
     const imageSrc = location.state?.image;
     const [selectedColor, setSelectedColor] = useState<'pink' | 'white' | null>(null);
 
-    const whiteBackgroundStyle = selectedColor === 'pink' ? { backgroundColor: '#F9B4BB' } : { backgroundColor: 'white' };
+    const whiteBackgroundStyle = selectedColor === 'pink'
+        ? { backgroundColor: '#F9B4BB' }
+        : { backgroundColor: 'white' };
 
     return (
         <>
@@ -39,7 +42,7 @@ const Result: React.FC = () => {
                         />
                     </div>
                 </div>
-                <div className="result">
+                <div className="result" onClick={() => navigate('/final', { state: { image: imageSrc, frameColor: selectedColor } })}>
                     <div className="r-text">결과보기</div>
                     <img src={arrow} width="27px" alt="arrow" style={{ justifyContent: "center" }} />
                 </div>
