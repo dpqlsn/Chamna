@@ -1,24 +1,26 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
-import Landing from './pages/Landing';
-import Main from './pages/Main';
-import Loading from './pages/Loading';
-import Result from './pages/Result.tsx';
-import Final from './pages/Final.jsx.tsx';
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/loading" element={<Loading />} />
-          <Route path="/main" element={<Main />} />
-          <Route path="/result" element={<Result />} />
-          <Route path="/final" element={<Final />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  )
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.tsx</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
-export default App
+export default App;
