@@ -1,6 +1,6 @@
 import * as _ from './style';
-import '../../App.css';
-import Chamna from '../../assets/Chamna.svg';
+import '@_styles';
+import Chamna from '@_assets/Chamna.svg';
 
 export default function Main(){
     return(
