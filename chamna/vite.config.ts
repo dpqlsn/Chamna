@@ -11,7 +11,11 @@ export default defineConfig({
   resolve: {
     alias: {
       "@_styles": path.resolve(__dirname, "src/App.css"),
-      '@_assets': path.resolve(__dirname, 'src/assets'),
+      "@_assets": path.resolve(__dirname, "src/assets"),
     },
   },
+  build: {
+    outDir: "dist",
+    emptyOutDir: true
+  }
 });
