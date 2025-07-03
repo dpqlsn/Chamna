@@ -1,7 +1,15 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@_assets/*": ["src/assets/*"],
+      "@_components/*": ["src/components/*"],
+      "@_notfound/*": ["src/components/NotFound/*"],
+      "@_pages/*": ["src/page/*"],
+      "@_styles/*": ["src/App.css"]
+    },
+    "jsx": "react-jsx"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }
