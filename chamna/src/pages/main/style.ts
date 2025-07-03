@@ -1,6 +1,9 @@
 import styled from '@emotion/styled'
 
 export const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100vh;
     background-color: #6AACCE;
@@ -15,6 +18,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.div`
-    font-size: 2rem;
+    font-size: 2.3rem;
     color: #F7ECDA;
+    margin-top: 1%;
 `;
