@@ -1,6 +1,7 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
+import Props from './types';
 
-export const Container = styled.div`
+export const Container = styled.div<Props>`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,6 +9,9 @@ export const Container = styled.div`
     height: 100vh;
     background-color: #6AACCE;
     overflow: hidden;
+    opacity: ${({ fadeOut }) => (fadeOut ? 0 : 1)};
+    transition: opacity 1s ease-in-out;
+    cursor: pointer;
 `;
 
 export const Wrapper = styled.div`
@@ -15,6 +19,10 @@ export const Wrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+`;
+
+export const Logo = styled.img`
+    height: auto;
 `;
 
 export const Title = styled.div`
