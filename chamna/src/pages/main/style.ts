@@ -8,7 +8,6 @@ export const Container = styled.div<Props>`
     width: 100%;
     height: 100vh;
     background-color: #6AACCE;
-    overflow: hidden;
     opacity: ${({ fadeOut }) => (fadeOut ? 0 : 1)};
     transition: opacity 1s ease-in-out;
     cursor: pointer;
