@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
+import Props from './types';
 
-export const Container = styled.div`
+export const Container = styled.div<Props>`
+    opacity: ${({ fadeIn }) => (fadeIn ? 1 : 0)};
+    transition: opacity 1s ease-in, transform 1s ease-in;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     height: 100vh;
-    background-color: #6AACCE;
 `;
