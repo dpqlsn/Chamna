@@ -9,7 +9,8 @@ import Camera from '@_assets/camera.svg';
 
 export default function Home() {
     const [fadeIn, setFadeIn] = useState(false);
-    const videoRef = useRef<HTMLVideoElement | null>(null);
+    const videoRef1 = useRef<HTMLVideoElement | null>(null);
+    const videoRef2 = useRef<HTMLVideoElement | null>(null);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -27,9 +28,8 @@ export default function Home() {
     useEffect(() => {
         navigator.mediaDevices.getUserMedia({ video: true })
             .then((stream) => {
-                if (videoRef.current) {
-                    videoRef.current.srcObject = stream;
-                }
+                if (videoRef1.current) videoRef1.current.srcObject = stream;
+                if (videoRef2.current) videoRef2.current.srcObject = stream;
             })
             .catch((err) => {
                 console.error("웹캠 접근 실패", err);
@@ -41,9 +41,12 @@ export default function Home() {
             <_.Top>
                 <_.Logo src={chamna} alt="logo" />
             </_.Top>
-                <_.VideoWrapper>
-                    <video ref={videoRef} autoPlay playsInline muted width="100%" height="40%" />
-                </_.VideoWrapper>
+
+            <_.VideoWrapper>
+                <video ref={videoRef1} autoPlay playsInline muted />
+                <video ref={videoRef2} autoPlay playsInline muted />
+            </_.VideoWrapper>
+
             <_.Bottom>
                 <_.Clock src={Clock} alt="Clock" />
                 <_.Camera src={Camera} alt="Camera" />
