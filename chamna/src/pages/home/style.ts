@@ -14,8 +14,14 @@ export const Top = styled.div`
 export const Bottom = styled.div`
     display: flex;
     justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    gap: 40%;
     width: 100%;
+    padding: 1rem 0; 
 `;
+
 
 export const Logo = styled.img`
     width: 4%;
