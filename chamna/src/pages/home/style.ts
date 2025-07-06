@@ -71,3 +71,14 @@ export const VideoWrapper = styled.div`
         transform: scaleX(-1);
     }
 `;
+
+export const Video = styled.video`
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scaleX(-1);
+`;
+
+export const VideoRight = styled(Video)`
+    filter: brightness(1.1) contrast(1.2) saturate(1.3) hue-rotate(10deg);
+`;
