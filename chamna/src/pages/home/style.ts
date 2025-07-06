@@ -22,7 +22,6 @@ export const Bottom = styled.div`
     padding: 1rem 0; 
 `;
 
-
 export const Logo = styled.img`
     width: 4%;
 `;
