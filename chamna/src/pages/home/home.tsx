@@ -36,6 +36,24 @@ export default function Home() {
             });
     }, []);
 
+    const captureAndNavigate = () => {
+        if (!videoRef1.current) return;
+
+        const video = videoRef1.current;
+        const canvas = document.createElement('canvas');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+
+        const ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+        const capturedImage = canvas.toDataURL('image/png');
+
+        navigate('/image', { state: { capturedImage } });
+    };
+
     return (
         <_.Container fadeIn={fadeIn}>
             <_.Top>
@@ -49,7 +67,7 @@ export default function Home() {
 
             <_.Bottom>
                 <_.Clock src={Clock} alt="Clock" />
-                <_.Camera src={Camera} alt="Camera" />
+                <_.Camera src={Camera} alt="Camera" onClick={captureAndNavigate} />
                 <_.Pic src={Pic} alt="Pic" />
             </_.Bottom>
         </_.Container>
