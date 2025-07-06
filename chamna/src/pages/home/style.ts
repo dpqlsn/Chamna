@@ -80,5 +80,5 @@ export const Video = styled.video`
 `;
 
 export const VideoRight = styled(Video)`
-    filter: brightness(1.1) contrast(1.2) saturate(1.3) hue-rotate(10deg);
+    filter:  brightness(1.2) contrast(0.9) saturate(1.1) blur(0.1rem);
 `;
