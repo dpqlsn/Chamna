@@ -55,3 +55,18 @@ export const Pic = styled.img`
         transform: scale(1.1);
     }
 `;
+
+export const VideoWrapper = styled.div`
+    flex: none;
+    height: 84vh; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+`;
