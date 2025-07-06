@@ -43,8 +43,8 @@ export default function Home() {
             </_.Top>
 
             <_.VideoWrapper>
-                <video ref={videoRef1} autoPlay playsInline muted />
-                <video ref={videoRef2} autoPlay playsInline muted />
+                <_.Video ref={videoRef1} autoPlay playsInline muted />
+                <_.VideoRight ref={videoRef2} autoPlay playsInline muted />
             </_.VideoWrapper>
 
             <_.Bottom>
