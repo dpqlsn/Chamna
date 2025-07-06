@@ -29,14 +29,29 @@ export const Logo = styled.img`
 export const Camera = styled.img`
     width: 2.5%;
     cursor: pointer;
+    transition: transform 0.2s ease;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
 `;
 
 export const Clock = styled.img`
     width: 2%;
     cursor: pointer;
+    transition: transform 0.2s ease;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
 `;
 
 export const Pic = styled.img`
     width: 2%;
     cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 `;
