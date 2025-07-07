@@ -57,7 +57,7 @@ export default function Home() {
     return (
         <_.Container fadeIn={fadeIn}>
             <_.Top>
-                <_.Logo src={chamna} alt="logo" />
+                <_.Logo src={chamna} alt="logo" onClick={() => navigate('/')} />
             </_.Top>
 
             <_.VideoWrapper>

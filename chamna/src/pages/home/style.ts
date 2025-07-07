@@ -24,6 +24,7 @@ export const Bottom = styled.div`
 
 export const Logo = styled.img`
     width: 4%;
+    cursor: pointer;
 `;
 
 export const Camera = styled.img`
