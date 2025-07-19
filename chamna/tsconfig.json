@@ -4,7 +4,7 @@
     "paths": {
       "@_assets/*": ["src/assets/*"],
       "@_components/*": ["src/components/*"],
-      "@_notfound/*": ["src/components/NotFound/*"],
+      "@_Modal/*": ["src/Modal/*"],
       "@_pages/*": ["src/page/*"],
       "@_styles/*": ["src/App.css"]
     },

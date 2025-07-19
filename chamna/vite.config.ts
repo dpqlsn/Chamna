@@ -12,6 +12,7 @@ export default defineConfig({
     alias: {
       "@_styles": path.resolve(__dirname, "src/App.css"),
       "@_assets": path.resolve(__dirname, "src/assets"),
+      "@_Modal": path.resolve(__dirname, "src/Modal"),
     },
   },
   build: {
