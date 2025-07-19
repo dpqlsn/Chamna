@@ -6,14 +6,20 @@ import Chamna from '@_assets/Chamna.svg';
 export default function Main() {
     const navigate = useNavigate();
     const [fadeOut, setFadeOut] = useState(false);
+    const [isFirstVisit] = useState(true);
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setFadeOut(true);
-        }, 1500);
+        const first = localStorage.getItem('first');
+        if (first) navigate('/home');
+        else { localStorage.setItem('hasVisited', 'true');
 
-        return () => clearTimeout(timer);
-    }, []);
+            const timer = setTimeout(() => {
+                setFadeOut(true);
+            }, 1500);
+
+            return () => clearTimeout(timer);
+        }
+    }, [navigate]);
 
     useEffect(() => {
         if (fadeOut) {
@@ -23,6 +29,8 @@ export default function Main() {
             return () => clearTimeout(navTimer);
         }
     }, [fadeOut, navigate]);
+
+    if (!isFirstVisit) return null;
 
     return (
         <_.Container onClick={() => navigate('/home')} fadeOut={fadeOut}>
