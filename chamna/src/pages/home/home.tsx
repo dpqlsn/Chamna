@@ -82,7 +82,7 @@ export default function Home() {
             <_.Camera src={Camera} alt="Camera" onClick={captureAndNavigate} />
             <_.Pic src={Pic} alt="Pic" onClick={handleOpen} />
         </_.Bottom>
-        {isTimerOpen && <Timer onModal={handleTimerClose} />}
+        {isTimerOpen && <Timer onModal={handleTimerClose} takePhoto={captureAndNavigate} />}
         </_.Container>
     );
 }
