@@ -79,7 +79,3 @@ export const Video = styled.video`
     object-fit: contain;
     transform: scaleX(-1);
 `;
-
-export const VideoRight = styled(Video)`
-    filter:  brightness(1.2) contrast(0.9) saturate(1.1) blur(0.1rem);
-`;

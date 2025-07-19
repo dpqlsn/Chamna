@@ -10,7 +10,6 @@ import Camera from '@_assets/camera.svg';
 export default function Home() {
     const [fadeIn, setFadeIn] = useState(false);
     const videoRef1 = useRef<HTMLVideoElement | null>(null);
-    const videoRef2 = useRef<HTMLVideoElement | null>(null);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -29,7 +28,6 @@ export default function Home() {
         navigator.mediaDevices.getUserMedia({ video: true })
             .then((stream) => {
                 if (videoRef1.current) videoRef1.current.srcObject = stream;
-                if (videoRef2.current) videoRef2.current.srcObject = stream;
             })
             .catch((err) => {
                 console.error("웹캠 접근 실패", err);
@@ -62,7 +60,6 @@ export default function Home() {
 
             <_.VideoWrapper>
                 <_.Video ref={videoRef1} autoPlay playsInline muted />
-                <_.VideoRight ref={videoRef2} autoPlay playsInline muted />
             </_.VideoWrapper>
 
             <_.Bottom>
