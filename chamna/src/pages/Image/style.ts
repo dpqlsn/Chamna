@@ -17,3 +17,8 @@ export const Logo = styled.img`
     width: 4%;
     cursor: pointer;
 `;
+
+export const Pic = styled.img`
+    transform: scaleX(-1);
+    width: 61%;
+`;

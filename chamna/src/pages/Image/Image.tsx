@@ -13,7 +13,7 @@ export default function Image() {
                 <_.Logo src={chamna} alt="logo" onClick={() => navigate('/')} />
             </_.Top>
                 {capturedImage ? (
-                    <img src={capturedImage} alt="캡쳐 이미지" style={{transform: 'scaleX(-1)'}} />
+                    <_.Pic src={capturedImage} alt="image" />
                 ) : (
                     <p>이미지가 없습니다.</p>
                 )}
