@@ -9,6 +9,7 @@ export const Container = styled.div`
   height: 100dvh;
   max-height: 100dvh;
   gap: 1rem;
+  cursor: pointer;
 `;
 
 export const Title = styled.div`

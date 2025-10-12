@@ -2,6 +2,6 @@
 
 import Landing from "@/ui/landing";
 
-export default function Home() {
+export default function LandingPage() {
   return <Landing />;
 }
