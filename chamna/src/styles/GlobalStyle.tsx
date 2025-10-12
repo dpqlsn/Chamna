@@ -13,16 +13,17 @@ const GlobalStyle = () => (
         box-sizing: border-box;
       }
       @font-face {
-          font-family: 'Gyeombalbal';
-          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/insungitCutelivelyjisu.woff2') format('woff2');
+          font-family: 'KkuBulLim';
+          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/BMkkubulimTTF-Regular.woff2') format('woff2');
           font-weight: normal;
           font-display: swap;
       }
       html,
       body,
       * {
-        font-family: "Gyeombalbal";
-        color: #547288;
+        font-family: "KkuBulLim", sans-serif;
+        color: #F7ECDA;
+        background-color: #6AACCE;
       }
 
       #nprogress .bar {
