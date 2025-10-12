@@ -1,7 +1,7 @@
-export default function Home() {
-  return (
-    <div >
+'use client'
 
-    </div>
-  );
+import Landing from "@/ui/landing";
+
+export default function Home() {
+  return <Landing />;
 }
