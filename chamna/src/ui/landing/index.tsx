@@ -9,6 +9,7 @@ export default function Landing() {
         <_.Container onClick={() => router.push('/main')}>
             <Image src="/assets/logo.svg" alt="logo" width={100} height={100} />
             <_.Title>참된 나를 추억하다</_.Title>
+            <_.Subtitle>클릭하여 들어가기</_.Subtitle>
         </_.Container>
     );
 }

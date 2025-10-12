@@ -16,3 +16,9 @@ export const Title = styled.div`
   font-size: 2.25rem;
   font-weight: 400;
 `;
+
+export const Subtitle = styled.div`
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #4F94B7;
+`;
