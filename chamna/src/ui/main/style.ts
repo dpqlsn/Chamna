@@ -1,5 +1,11 @@
 import styled from "@emotion/styled";
 
+const Basic = `
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`;
+
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -11,29 +17,17 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  ${Basic}
   width: 100%;
-  height: 80vh;
+  height: 88vh;
   row-gap: 2rem;
 `;
 
 export const LightWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  ${Basic}
   width: 30%;
-  height: 80vh;
+  height: 88vh;
   row-gap: 1rem;
-`;
-
-export const Box = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  background-color: aqua;
 `;
 
 export const Group = styled.div`
@@ -43,13 +37,14 @@ export const Group = styled.div`
 `;
 
 export const Frame = styled.div`
-  display: flex;
+  ${Basic}
   justify-content: center;
-  align-items: center;
   width: 100%;
   height: 40vh;
   background-color: beige;
+  border-radius: 4px;
   font-size: 2rem;
+  gap: 1.5rem;
   color: #75685B;
 `;
 

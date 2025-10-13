@@ -1,21 +1,29 @@
 import * as _ from './style';
 import Image from 'next/image';
+import Webcam from 'react-webcam';
 
 export default function Main() {
     return (
         <_.Container>
-            <_.Flower>
-                <Image src="/assets/flower.svg" alt="flower" width={390} height={390} style={{ backgroundColor: 'transparent' }} />
-            </_.Flower>
+
             <_.Wrapper>
-                <_.Box />
+                <Webcam
+                    audio={false}
+                    style={{ width: '100%', height: '80vh', borderRadius: '4px', objectFit: 'cover' }}
+                />
                 <_.Group>
                     <Image src="/assets/timer.svg" alt="timer" width={50} height={50} style={{ cursor: 'pointer' }} />
                     <Image src="/assets/camera.svg" alt="camera" width={50} height={50} style={{ cursor: 'pointer' }} />
                 </_.Group>
             </_.Wrapper>
             <_.LightWrapper>
-                <_.Frame>preview</_.Frame>
+                <_.Frame>
+                    <Webcam
+                        audio={false}
+                        style={{ width: '80%', height: '25vh', borderRadius: '2px', objectFit: 'cover' }}
+                    />
+                    preview
+                </_.Frame>
                 <Image src="/assets/heartflower.svg" alt="flower" width={344} height={320} />
             </_.LightWrapper>
         </_.Container>
