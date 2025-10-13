@@ -25,7 +25,7 @@ export const LightWrapper = styled.div`
   align-items: center;
   width: 30%;
   height: 80vh;
-  row-gap: 2rem;
+  row-gap: 1rem;
 `;
 
 export const Box = styled.div`
