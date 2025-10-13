@@ -48,8 +48,6 @@ export const Frame = styled.div`
   gap: 1rem;
   color: #75685B;
   padding: 1.25rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  border: 1px solid rgba(0,0,0,0.04);
   overflow: hidden;
 
   > img {
