@@ -44,9 +44,13 @@ export const Group = styled.div`
 
 export const Frame = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 40vh;
   background-color: beige;
+  font-size: 2rem;
+  color: #75685B;
 `;
 
 export const Flower = styled.div`

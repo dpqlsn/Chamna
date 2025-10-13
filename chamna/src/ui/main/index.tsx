@@ -15,7 +15,7 @@ export default function Main() {
                 </_.Group>
             </_.Wrapper>
             <_.LightWrapper>
-                <_.Frame />
+                <_.Frame>preview</_.Frame>
                 <Image src="/assets/heartflower.svg" alt="flower" width={344} height={320} />
             </_.LightWrapper>
         </_.Container>
