@@ -24,3 +24,14 @@ export const Img = styled.img`
   object-fit: contain;
   background-color: transparent;
 `;
+
+export const Err = styled.div`
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  color: #75685B;
+  background-color: transparent;
+  text-align: center;
+`;

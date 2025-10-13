@@ -15,7 +15,7 @@ export default function Deco() {
                 {capture ? (
                     <_.Img src={capture} alt="captured" />
                 ) : (
-                    <div>촬영된 사진이 없습니다</div>
+                    <_.Err>촬영된 사진이 없습니다</_.Err>
                 )}
             </_.Frame>
         </_.Container>
