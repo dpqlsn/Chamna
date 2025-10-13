@@ -31,7 +31,7 @@ export default function Deco() {
                     <_.Circle />
                 </_.Color>
             </_.Wrapper>
-            <_.Group>
+            <_.Group onClick={() => router.push('/print')}>
                 <Image src="/assets/arrow.svg" alt="arrow" width={24} height={24} />
                 <_.Text>출력하기</_.Text>
             </_.Group>
