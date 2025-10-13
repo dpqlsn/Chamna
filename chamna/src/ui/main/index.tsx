@@ -9,6 +9,7 @@ export default function Main() {
             <_.Wrapper>
                 <Webcam
                     audio={false}
+                    mirrored={true}
                     style={{ width: '100%', height: '80vh', borderRadius: '4px', objectFit: 'cover' }}
                 />
                 <_.Group>
@@ -20,6 +21,7 @@ export default function Main() {
                 <_.Frame>
                     <Webcam
                         audio={false}
+                        mirrored={true}
                         style={{ width: '80%', height: '25vh', borderRadius: '2px', objectFit: 'cover' }}
                     />
                     preview
