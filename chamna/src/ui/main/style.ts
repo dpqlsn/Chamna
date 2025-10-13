@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import Image from 'next/image';
 
 const Basic = `
   display: flex;
@@ -75,10 +76,12 @@ export const Timer = styled.button`
   font-weight: 400;
   border: none;
   padding: 0.5rem 0rem;
+  transition: transform 0.2s;
   cursor: pointer;
 
   &:hover {
     color: #FFDDA6;
+    transform: scale(1.1);
   }
 `;
 
@@ -86,4 +89,13 @@ export const TimerOption = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+`;
+
+export const Icon = styled(Image)`
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 `;

@@ -60,8 +60,8 @@ export default function Main() {
                 <Image src="/assets/heartflower.svg" alt="flower" width={344} height={320} />
             </_.LightWrapper>
             <_.Group>
-                <Image src="/assets/camera.svg" alt="camera" width={50} height={50} style={{ cursor: 'pointer' }} onClick={handleCapture} />
-                <Image src="/assets/timer.svg" alt="timer" width={50} height={50} style={{ cursor: 'pointer' }} onClick={handleTimerClick} />
+                <_.Icon src="/assets/camera.svg" alt="camera" width={50} height={50} onClick={handleCapture} />
+                <_.Icon src="/assets/timer.svg" alt="timer" width={50} height={50} onClick={handleTimerClick} />
                 {showTimerOptions && (
                     <_.TimerOption>
                         {[3, 5, 10].map(sec => (
