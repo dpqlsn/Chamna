@@ -42,11 +42,22 @@ export const Frame = styled.div`
   justify-content: center;
   width: 100%;
   height: 40vh;
-  background-color: beige;
+  background-color: #F7ECDA;
   border-radius: 4px;
-  font-size: 2rem;
-  gap: 1.5rem;
+  font-size: 1.6rem;
+  gap: 1rem;
   color: #75685B;
+  padding: 1.25rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+  overflow: hidden;
+
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+  }
 `;
 
 export const Flower = styled.div`

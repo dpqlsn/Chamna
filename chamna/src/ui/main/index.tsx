@@ -17,6 +17,12 @@ export default function Main() {
         setCountdown(null);
     };
 
+    // 이미지 저장
+    const persistCapture = (src: string | null) => {
+        if (src) sessionStorage.setItem('capture', src);
+        else sessionStorage.removeItem('capture');
+    };
+
     const handleTimerClick = () => {
         setShowTimerOptions(prev => !prev);
     };
@@ -32,6 +38,7 @@ export default function Main() {
                 } else {
                     clearInterval(timerInterval);
                     handleCapture();
+                    setTimeout(() => persistCapture(webcamRef.current?.getScreenshot() ?? null), 0);
                     return null;
                 }
             });
@@ -53,16 +60,16 @@ export default function Main() {
             <_.LightWrapper>
                 <_.Frame>
                     {capture ? (
-                        <img src={capture} alt="preview" style={{ width: '80%', height: '25vh', borderRadius: '2px', objectFit: 'cover' }} />
+                        <img src={capture} alt="preview" />
                     ) : (
-                        <Webcam audio={false} mirrored={true} style={{ width: '80%', height: '25vh', borderRadius: '2px', objectFit: 'cover' }} />
+                        <Webcam audio={false} mirrored={true} style={{ width: '100%', height: '100%', borderRadius: '2px', objectFit: 'cover' }} />
                     )}
                     preview
                 </_.Frame>
                 <Image src="/assets/heartflower.svg" alt="flower" width={360} height={360} />
             </_.LightWrapper>
             <_.Group>
-                <_.Icon src="/assets/arrow.svg" alt="arrow" width={50} height={50} onClick={() => router.push('/deco')}/>
+                <_.Icon src="/assets/arrow.svg" alt="arrow" width={50} height={50} onClick={() => { persistCapture(capture); router.push('/deco'); }} />
                 <_.Icon src="/assets/camera.svg" alt="camera" width={50} height={50} onClick={handleCapture} />
                 <_.Icon src="/assets/timer.svg" alt="timer" width={50} height={50} onClick={handleTimerClick} />
 
