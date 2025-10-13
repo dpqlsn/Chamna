@@ -2,12 +2,14 @@ import * as _ from './style';
 import Image from 'next/image';
 import Webcam from 'react-webcam';
 import { useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Main() {
     const webcamRef = useRef<Webcam>(null);
     const [capture, setCapture] = useState<string | null>(null);
     const [showTimerOptions, setShowTimerOptions] = useState(false);
     const [countdown, setCountdown] = useState<number | null>(null);
+    const router = useRouter();
 
     const handleCapture = () => {
         const imageSrc = webcamRef.current?.getScreenshot();
@@ -60,8 +62,10 @@ export default function Main() {
                 <Image src="/assets/heartflower.svg" alt="flower" width={344} height={320} />
             </_.LightWrapper>
             <_.Group>
+                <_.Icon src="/assets/arrow.svg" alt="arrow" width={50} height={50} onClick={() => router.push('/deco')}/>
                 <_.Icon src="/assets/camera.svg" alt="camera" width={50} height={50} onClick={handleCapture} />
                 <_.Icon src="/assets/timer.svg" alt="timer" width={50} height={50} onClick={handleTimerClick} />
+
                 {showTimerOptions && (
                     <_.TimerOption>
                         {[3, 5, 10].map(sec => (
