@@ -44,6 +44,11 @@ export const Group = styled.div`
   flex-direction: row-reverse;
   gap: 0.5rem;
   cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const TopGroup = styled.div`
@@ -51,6 +56,11 @@ export const TopGroup = styled.div`
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 `;
 
 export const Color = styled.div`
@@ -76,5 +86,10 @@ export const Circle = styled.div`
   height: 3rem;
   border-radius: 50%;
   background-color: #f69700ff;
+  transition: transform 0.2s;
   cursor: pointer;
+
+  &:hover {
+    transform: scale(1.15);
+  }
 `;
