@@ -1,0 +1,31 @@
+import styled from "@emotion/styled";
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100dvh;
+  max-height: 100dvh;
+  gap: 1rem;
+  cursor: pointer;
+`;
+
+export const Title = styled.div`
+  font-size: 2.25rem;
+  font-weight: 400;
+`;
+
+export const Subtitle = styled.div`
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #4F94B7;
+
+  animation: blink 1.2s infinite;
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+`;
