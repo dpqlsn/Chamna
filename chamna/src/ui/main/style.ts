@@ -14,7 +14,7 @@ export const Container = styled.div`
   gap: 3.5rem;
   width: 100%;
   max-height: 100vh;
-  padding: 4rem 4rem;
+  padding: 4rem;
 `;
 
 export const Wrapper = styled.div`

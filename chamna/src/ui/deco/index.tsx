@@ -1,5 +1,6 @@
 import * as _ from "./style";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Deco() {
     const [capture, setCapture] = useState<string | null>(null);
@@ -11,13 +12,27 @@ export default function Deco() {
 
     return (
         <_.Container>
-            <_.Frame>
-                {capture ? (
-                    <_.Img src={capture} alt="captured" />
-                ) : (
-                    <_.Err>촬영된 사진이 없습니다</_.Err>
-                )}
-            </_.Frame>
+            <_.TopGroup>
+                <Image src="/assets/arrow.svg" alt="arrow" width={24} height={24} style={{ transform: 'rotate(180deg)' }} />
+                <_.Text>다시 찍기</_.Text>
+            </_.TopGroup>
+            <_.Wrapper>
+                <_.Frame>
+                    {capture ? (
+                        <_.Img src={capture} alt="captured" />
+                    ) : (
+                        <_.Err>촬영된 사진이 없습니다</_.Err>
+                    )}
+                </_.Frame>
+                <_.Color>
+                    <_.Text>필터</_.Text>
+                    <_.Circle />
+                </_.Color>
+            </_.Wrapper>
+            <_.Group>
+                <Image src="/assets/arrow.svg" alt="arrow" width={24} height={24} />
+                <_.Text>출력하기</_.Text>
+            </_.Group>
         </_.Container>
     );
 }

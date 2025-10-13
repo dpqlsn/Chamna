@@ -2,9 +2,11 @@ import styled from "@emotion/styled";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 5rem;
   width: 100%;
   max-height: 100vh;
+  padding: 4rem;
 `;
 
 export const Frame = styled.div`
@@ -34,4 +36,45 @@ export const Err = styled.div`
   color: #75685B;
   background-color: transparent;
   text-align: center;
+`;
+
+export const Group = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 0.5rem;
+  cursor: pointer;
+`;
+
+export const TopGroup = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+`;
+
+export const Color = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+`;
+
+export const Text = styled.div`
+  font-size: 1.65rem;
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  justify-content: start;
+  gap: 4rem;
+`;
+
+export const Circle = styled.div`
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #f69700ff;
+  cursor: pointer;
 `;
