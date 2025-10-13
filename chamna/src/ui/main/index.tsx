@@ -59,7 +59,7 @@ export default function Main() {
                     )}
                     preview
                 </_.Frame>
-                <Image src="/assets/heartflower.svg" alt="flower" width={344} height={320} />
+                <Image src="/assets/heartflower.svg" alt="flower" width={360} height={360} />
             </_.LightWrapper>
             <_.Group>
                 <_.Icon src="/assets/arrow.svg" alt="arrow" width={50} height={50} onClick={() => router.push('/deco')}/>

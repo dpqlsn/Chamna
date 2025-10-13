@@ -21,14 +21,13 @@ export const Wrapper = styled.div`
   ${Basic}
   width: 100%;
   height: 82vh;
-  row-gap: 2rem;
 `;
 
 export const LightWrapper = styled.div`
   ${Basic}
   width: 30%;
   height: 82vh;
-  gap: 2rem;
+  gap: 1rem;
 `;
 
 export const Group = styled.div`
