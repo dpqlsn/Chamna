@@ -79,8 +79,7 @@ export const Timer = styled.button`
   cursor: pointer;
 
   &:hover {
-    color: #FFDDA6;
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 `;
 
