@@ -11,16 +11,19 @@ export default function Main() {
     const [countdown, setCountdown] = useState<number | null>(null);
     const router = useRouter();
 
-    const handleCapture = () => {
-        const imageSrc = webcamRef.current?.getScreenshot();
-        if (imageSrc) setCapture(imageSrc);
-        setCountdown(null);
+    // 가장 최근 이미지 저장
+    const persistCapture = (src: string | null) => {
+        if (src) sessionStorage.setItem('chamna_capture', src);
+        else sessionStorage.removeItem('chamna_capture');
     };
 
-    // 이미지 저장
-    const persistCapture = (src: string | null) => {
-        if (src) sessionStorage.setItem('capture', src);
-        else sessionStorage.removeItem('capture');
+    const handleCapture = () => {
+        const imageSrc = webcamRef.current?.getScreenshot();
+        if (imageSrc) {
+            setCapture(imageSrc);
+            persistCapture(imageSrc);
+        }
+        setCountdown(null);
     };
 
     const handleTimerClick = () => {
@@ -38,7 +41,6 @@ export default function Main() {
                 } else {
                     clearInterval(timerInterval);
                     handleCapture();
-                    setTimeout(() => persistCapture(webcamRef.current?.getScreenshot() ?? null), 0);
                     return null;
                 }
             });
