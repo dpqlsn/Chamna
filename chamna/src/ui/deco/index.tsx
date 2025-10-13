@@ -1,9 +1,11 @@
 import * as _ from "./style";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Deco() {
     const [capture, setCapture] = useState<string | null>(null);
+    const router = useRouter();
 
     useEffect(() => {
         const stored = sessionStorage.getItem('capture');
@@ -12,7 +14,7 @@ export default function Deco() {
 
     return (
         <_.Container>
-            <_.TopGroup>
+            <_.TopGroup onClick={() => router.push('/main')}>
                 <Image src="/assets/arrow.svg" alt="arrow" width={24} height={24} style={{ transform: 'rotate(180deg)' }} />
                 <_.Text>다시 찍기</_.Text>
             </_.TopGroup>
