@@ -21,4 +21,11 @@ export const Subtitle = styled.div`
   font-size: 1.25rem;
   font-weight: 300;
   color: #4F94B7;
+
+  animation: blink 1.2s infinite;
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
 `;
