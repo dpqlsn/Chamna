@@ -18,7 +18,7 @@ export async function saveCapturedImage(capture: string, filter: string) {
   const ctx = canvas.getContext("2d");
   if (!ctx) return;
 
-  ctx.fillStyle = "#fafafa";
+  ctx.fillStyle = "#fff";
   ctx.fillRect(0, 0, canvasW, canvasH);
 
   const imgAspect = img.width / img.height;
