@@ -2,15 +2,16 @@ import * as _ from "./style";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useCaptureStore } from '../../lib/useCaptureStore';
 
 export default function Deco() {
     const [capture, setCapture] = useState<string | null>(null);
+    const globalCapture = useCaptureStore(state => state.capture);
     const router = useRouter();
 
     useEffect(() => {
-        const stored = sessionStorage.getItem('capture');
-        if (stored) setCapture(stored);
-    }, []);
+        if (globalCapture) setCapture(globalCapture);
+    }, [globalCapture]);
 
     return (
         <_.Container>

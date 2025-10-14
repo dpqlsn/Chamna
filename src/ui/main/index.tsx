@@ -2,6 +2,7 @@ import * as _ from './style';
 import Image from 'next/image';
 import Webcam from 'react-webcam';
 import { useRef, useState } from 'react';
+import { useCaptureStore } from '@/lib/useCaptureStore';
 import { useRouter } from 'next/navigation';
 
 export default function Main() {
@@ -11,17 +12,13 @@ export default function Main() {
     const [countdown, setCountdown] = useState<number | null>(null);
     const router = useRouter();
 
-    // 가장 최근 이미지 저장
-    const persistCapture = (src: string | null) => {
-        if (src) sessionStorage.setItem('chamna_capture', src);
-        else sessionStorage.removeItem('chamna_capture');
-    };
+    const setGlobalCapture = useCaptureStore((state) => state.setCapture);
 
     const handleCapture = () => {
         const imageSrc = webcamRef.current?.getScreenshot();
         if (imageSrc) {
             setCapture(imageSrc);
-            persistCapture(imageSrc);
+            setGlobalCapture(imageSrc);
         }
         setCountdown(null);
     };
@@ -71,7 +68,7 @@ export default function Main() {
                 <_.Group>
                     <_.Icon src="/assets/timer.svg" alt="timer" width={50} height={50} onClick={handleTimerClick} />
                     <_.Icon src="/assets/camera.svg" alt="camera" width={50} height={50} onClick={handleCapture} />
-                    <_.Icon src="/assets/arrow.svg" alt="arrow" width={50} height={50} onClick={() => { persistCapture(capture); router.push('/deco'); }} />
+                    <_.Icon src="/assets/arrow.svg" alt="arrow" width={50} height={50} onClick={() => { setGlobalCapture(capture); router.push('/deco'); }} />
                 </_.Group>
                 <Image src="/assets/heartflower.svg" alt="flower" width={300} height={300} />
             </_.LightWrapper>
