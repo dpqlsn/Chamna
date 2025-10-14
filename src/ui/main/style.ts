@@ -27,14 +27,12 @@ export const LightWrapper = styled.div`
   ${Basic}
   width: 30%;
   height: 82vh;
-  gap: 1rem;
+  gap: 1.5rem;
 `;
 
 export const Group = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-self: flex-start; 
+  gap: 3rem;
 `;
 
 export const Frame = styled.div`
@@ -80,22 +78,26 @@ export const Count = styled.div`
 
 
 export const Timer = styled.button`
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-size: 2rem;
+  padding: 0rem 1rem;
+  background-color: transparent;
   border: none;
-  padding: 0.5rem 0rem;
-  transition: transform 0.2s;
+  z-index: 1;
+  transition: transform 0.15s;
   cursor: pointer;
 
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
 `;
 
 export const TimerOption = styled.div`
   display: flex;
-  flex-direction: column;
+  position: absolute;
   gap: 0.5rem;
+  top: 1.8rem;
+  left: 50%;
+  transform: translateX(-50%);
 `;
 
 export const Icon = styled(Image)`

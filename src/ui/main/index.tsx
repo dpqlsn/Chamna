@@ -68,23 +68,22 @@ export default function Main() {
                     )}
                     preview
                 </_.Frame>
-                <Image src="/assets/heartflower.svg" alt="flower" width={360} height={360} />
+                <_.Group>
+                    <_.Icon src="/assets/timer.svg" alt="timer" width={50} height={50} onClick={handleTimerClick} />
+                    <_.Icon src="/assets/camera.svg" alt="camera" width={50} height={50} onClick={handleCapture} />
+                    <_.Icon src="/assets/arrow.svg" alt="arrow" width={50} height={50} onClick={() => { persistCapture(capture); router.push('/deco'); }} />
+                </_.Group>
+                <Image src="/assets/heartflower.svg" alt="flower" width={300} height={300} />
             </_.LightWrapper>
-            <_.Group>
-                <_.Icon src="/assets/arrow.svg" alt="arrow" width={50} height={50} onClick={() => { persistCapture(capture); router.push('/deco'); }} />
-                <_.Icon src="/assets/camera.svg" alt="camera" width={50} height={50} onClick={handleCapture} />
-                <_.Icon src="/assets/timer.svg" alt="timer" width={50} height={50} onClick={handleTimerClick} />
-
-                {showTimerOptions && (
-                    <_.TimerOption>
-                        {[3, 5, 10].map(sec => (
-                            <_.Timer key={sec} onClick={() => startTimer(sec)}>
-                                {sec}초
-                            </_.Timer>
-                        ))}
-                    </_.TimerOption>
-                )}
-            </_.Group>
+            {showTimerOptions && (
+                <_.TimerOption>
+                    {[3, 5, 10].map(sec => (
+                        <_.Timer key={sec} onClick={() => startTimer(sec)}>
+                            {sec}초
+                        </_.Timer>
+                    ))}
+                </_.TimerOption>
+            )}
         </_.Container>
     );
 }
