@@ -2,18 +2,20 @@ import styled from "@emotion/styled";
 
 export const Container = styled.div`
   display: flex;
+  position: fixed;
   flex-direction: column;
   gap: 5rem;
   width: 100%;
   max-height: 100vh;
-  padding: 4rem;
+  padding: 5rem 4rem;
+  top: 0;
 `;
 
 export const Frame = styled.div`
   justify-content: center;
   width: 35%;
-  height: 60vh;
-  background-color: #FAFAFA;
+  height: 55vh;
+  background-color: #F7ECDA;
   border-radius: 4px;
   gap: 1rem;
   padding: 2rem;
@@ -22,7 +24,7 @@ export const Frame = styled.div`
 
 export const Img = styled.img`
   width: 100%;
-  height: 45vh;
+  height: 40vh;
   object-fit: contain;
   background-color: transparent;
 `;
