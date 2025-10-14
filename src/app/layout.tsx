@@ -11,6 +11,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+        <title>참나</title>
+      </head>
       <body>
         <Container>
           <GlobalStyle />
