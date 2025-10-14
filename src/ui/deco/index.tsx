@@ -2,7 +2,7 @@ import * as _ from "./style";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useCaptureStore } from '../../lib/useCaptureStore';
+import { useCaptureStore } from '@/lib/useCaptureStore';
 
 export default function Deco() {
     const [capture, setCapture] = useState<string | null>(null);
