@@ -15,7 +15,7 @@ export const Frame = styled.div`
   justify-content: center;
   width: 35%;
   height: 55vh;
-  background-color: #F7ECDA;
+  background-color: #f7ecda;
   border-radius: 4px;
   gap: 1rem;
   padding: 2rem;
@@ -35,7 +35,7 @@ export const Err = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 1.25rem;
-  color: #75685B;
+  color: #75685b;
   background-color: transparent;
   text-align: center;
 `;
@@ -87,11 +87,35 @@ export const Circle = styled.div`
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background-color: #f69700ff;
   transition: transform 0.2s;
   cursor: pointer;
 
   &:hover {
     transform: scale(1.15);
   }
+`;
+
+export const FilterNone = styled(Circle)`
+  background-color: #fff2deff;
+`;
+
+export const FilterGray = styled(Circle)`
+  background-color: #9e9e9e;
+`;
+
+export const FilterSepia = styled(Circle)`
+  background-color: #FBB853;
+`;
+
+export const FilterContrast = styled(Circle)`
+  background-color: #7b9fc4;
+`;
+
+export const FilterBright = styled(Circle)`
+  background-color: #A4CDE2;
+`;
+
+export const FilterList = styled.div`
+  display: flex;
+  gap: 1rem;
 `;
