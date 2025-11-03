@@ -30,8 +30,8 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100dvh;
-  max-height: 100dvh;
+  height: 100vh;
+  max-height: 100vh;
   background-repeat: no-repeat;
   background-position: center;
   overflow-x: auto;
